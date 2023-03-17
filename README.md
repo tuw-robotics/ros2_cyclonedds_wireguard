@@ -17,6 +17,13 @@ Peers with IP:
 
 
 ## Example
+Compile the project with
+
+```
+ros-$ROS_DISTRO-rmw-cyclonedds-cpp
+source env.sh
+colcon build
+```
 
 on 192.168.33.80 run:
 ```
