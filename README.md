@@ -23,7 +23,6 @@ Change the `cyclonedds.xml` to fit your setup.
   - 192.168.33.80
   - 192.168.33.51
 
-
 ## Example
 Compile the project with
 
@@ -43,3 +42,7 @@ on 192.168.33.51 run:
 ```
 ros2 run examples_rclcpp_minimal_publisher publisher_lambda
 ```
+
+## Tested
+The setup was testet on
+* Ubuntu 22.04 with ROS humble.
