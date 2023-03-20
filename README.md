@@ -9,19 +9,26 @@ export CYCLONEDDS_URI=file:///$(pwd)/cyclonedds.xml
 ```
 
 ## Setup
-wireguard networks with interface name wg-n16 
+Install cyclonedds with:
+```
+sduo apt install ros-$ROS_DISTRO-rmw-cyclonedds-cpp
+```
+Change the `cyclonedds.xml` to fit your setup.
 
-Peers with IP:
-- 192.168.33.80
-- 192.168.33.51
-
+* Set the correct NetworkInterface<br> 
+  Currently:
+  - wg-n16
+* Define the peers used with there wireguard ip adresses<br>
+  Currently:
+  - 192.168.33.80
+  - 192.168.33.51
 
 ## Example
 Compile the project with
 
 ```
-ros-$ROS_DISTRO-rmw-cyclonedds-cpp
-source env.sh
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+export CYCLONEDDS_URI=file:///$(pwd)/cyclonedds.xml  
 colcon build
 ```
 
@@ -35,3 +42,7 @@ on 192.168.33.51 run:
 ```
 ros2 run examples_rclcpp_minimal_publisher publisher_lambda
 ```
+
+## Tested
+The setup was testet on
+* Ubuntu 22.04 with ROS humble.
