@@ -9,7 +9,7 @@ ENV PROJECT_DIR=/root/ws
 USER root
 
 RUN apt-get update && apt-get -y upgrade
-RUN apt-get install -y  \
+RUN apt-get install -y  iproute2 vim \
         ros-$ROS_DISTRO-rmw-fastrtps-cpp \
         ros-$ROS_DISTRO-rmw-cyclonedds-cpp \
         ros-$ROS_DISTRO-rmw-gurumdds-cpp;
