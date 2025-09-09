@@ -11,7 +11,7 @@ export CYCLONEDDS_URI=file:///$(pwd)/cyclonedds.xml
 ## Setup
 Install cyclonedds with:
 ```
-sduo apt install ros-$ROS_DISTRO-rmw-cyclonedds-cpp
+sudo apt install ros-$ROS_DISTRO-rmw-cyclonedds-cpp
 ```
 Change the `cyclonedds.xml` to fit your setup.
 
